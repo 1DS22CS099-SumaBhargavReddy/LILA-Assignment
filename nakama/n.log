@@ -1,0 +1,49 @@
++ /nakama/nakama migrate up --database.address postgres:localdb@postgres:5432/nakama?sslmode=disable
+{"level":"info","ts":"2026-04-12T17:27:15.249Z","caller":"server/db.go:140","msg":"Database information","version":"PostgreSQL 12.2 on x86_64-pc-linux-musl, compiled by gcc (Alpine 9.2.0) 9.2.0, 64-bit"}
+{"level":"info","ts":"2026-04-12T17:27:15.252Z","caller":"migrate/migrate.go:109","msg":"Applying database migrations","limit":-1}
+{"level":"info","ts":"2026-04-12T17:27:15.592Z","caller":"migrate/migrate.go:116","msg":"Successfully applied migration","count":11}
++ exec /nakama/nakama --config /nakama/data/local.yml --database.address postgres:localdb@postgres:5432/nakama?sslmode=disable
+{"level":"info","ts":"2026-04-12T17:27:15.626Z","caller":"server/config.go:94","msg":"Successfully loaded config file","path":"/nakama/data/local.yml"}
+{"level":"warn","ts":"2026-04-12T17:27:15.627Z","caller":"server/config.go:326","msg":"WARNING: insecure default parameter value, change this for production!","param":"console.username"}
+{"level":"warn","ts":"2026-04-12T17:27:15.627Z","caller":"server/config.go:330","msg":"WARNING: insecure default parameter value, change this for production!","param":"console.password"}
+{"level":"warn","ts":"2026-04-12T17:27:15.627Z","caller":"server/config.go:338","msg":"WARNING: insecure default parameter value, change this for production!","param":"socket.server_key"}
+{"level":"warn","ts":"2026-04-12T17:27:15.627Z","caller":"server/config.go:342","msg":"WARNING: insecure default parameter value, change this for production!","param":"session.encryption_key"}
+{"level":"warn","ts":"2026-04-12T17:27:15.627Z","caller":"server/config.go:346","msg":"WARNING: insecure default parameter value, change this for production!","param":"session.refresh_encryption_key"}
+{"level":"warn","ts":"2026-04-12T17:27:15.627Z","caller":"server/config.go:350","msg":"WARNING: insecure default parameter value, change this for production!","param":"runtime.http_key"}
+{"level":"info","ts":"2026-04-12T17:27:15.627Z","caller":"main.go:129","msg":"Nakama starting"}
+{"level":"info","ts":"2026-04-12T17:27:15.627Z","caller":"main.go:130","msg":"Node","name":"tictactoe-server","version":"3.22.0+4a4c53d7","runtime":"go1.22.4","cpu":12,"proc":12}
+{"level":"info","ts":"2026-04-12T17:27:15.627Z","caller":"main.go:131","msg":"Data directory","path":"/nakama/data"}
+{"level":"info","ts":"2026-04-12T17:27:15.627Z","caller":"main.go:142","msg":"Database connections","dsns":["postgres:xxxxx@postgres:5432/nakama?sslmode=disable"]}
+{"level":"info","ts":"2026-04-12T17:27:15.636Z","caller":"server/db.go:140","msg":"Database information","version":"PostgreSQL 12.2 on x86_64-pc-linux-musl, compiled by gcc (Alpine 9.2.0) 9.2.0, 64-bit"}
+{"level":"info","ts":"2026-04-12T17:27:15.659Z","caller":"server/leaderboard_rank_cache.go:136","msg":"Initializing leaderboard rank cache"}
+{"level":"info","ts":"2026-04-12T17:27:15.659Z","caller":"server/leaderboard_rank_cache.go:197","msg":"Leaderboard rank cache initialization completed successfully","cached":[],"skipped":[],"duration":"489.229µs"}
+{"level":"info","ts":"2026-04-12T17:27:15.661Z","caller":"server/runtime.go:642","msg":"Initialising runtime","path":"/nakama/data/modules"}
+{"level":"info","ts":"2026-04-12T17:27:15.661Z","caller":"server/runtime.go:649","msg":"Initialising runtime event queue processor"}
+{"level":"info","ts":"2026-04-12T17:27:15.661Z","caller":"server/runtime.go:651","msg":"Runtime event queue processor started","size":65536,"workers":8}
+{"level":"info","ts":"2026-04-12T17:27:15.662Z","caller":"server/runtime_go.go:2763","msg":"Initialising Go runtime provider","path":"/nakama/data/modules"}
+{"level":"info","ts":"2026-04-12T17:27:15.662Z","caller":"server/runtime_go.go:2787","msg":"Go runtime modules loaded"}
+{"level":"info","ts":"2026-04-12T17:27:15.662Z","caller":"server/runtime_lua.go:116","msg":"Initialising Lua runtime provider","path":"/nakama/data/modules"}
+{"level":"info","ts":"2026-04-12T17:27:15.665Z","caller":"server/runtime_lua.go:1243","msg":"Lua runtime modules loaded"}
+{"level":"info","ts":"2026-04-12T17:27:15.665Z","caller":"server/runtime_lua.go:1246","msg":"Allocating minimum Lua runtime pool","count":16}
+{"level":"info","ts":"2026-04-12T17:27:15.665Z","caller":"server/runtime_lua.go:1254","msg":"Allocated minimum Lua runtime pool"}
+{"level":"info","ts":"2026-04-12T17:27:15.665Z","caller":"server/runtime_javascript.go:636","msg":"Initialising JavaScript runtime provider","path":"/nakama/data/modules","entrypoint":"index.js"}
+{"level":"info","ts":"2026-04-12T17:27:15.688Z","caller":"server/runtime_javascript_logger.go:74","msg":"=== Tic-Tac-Toe Module Loading ==="}
+{"level":"info","ts":"2026-04-12T17:27:15.692Z","caller":"server/runtime_javascript_logger.go:74","msg":"Leaderboard 'tic_tac_toe_global' created/verified."}
+{"level":"info","ts":"2026-04-12T17:27:15.693Z","caller":"server/runtime_javascript_logger.go:74","msg":"Match handler 'tic-tac-toe' registered."}
+{"level":"info","ts":"2026-04-12T17:27:15.693Z","caller":"server/runtime_javascript_logger.go:74","msg":"RPC functions registered."}
+{"level":"info","ts":"2026-04-12T17:27:15.693Z","caller":"server/runtime_javascript_logger.go:74","msg":"Matchmaker hook registered."}
+{"level":"info","ts":"2026-04-12T17:27:15.693Z","caller":"server/runtime_javascript_logger.go:74","msg":"=== Tic-Tac-Toe Module Loaded Successfully ==="}
+{"level":"info","ts":"2026-04-12T17:27:15.693Z","caller":"server/runtime_javascript.go:1738","msg":"JavaScript runtime modules loaded"}
+{"level":"info","ts":"2026-04-12T17:27:15.693Z","caller":"server/runtime_javascript.go:1741","msg":"Allocating minimum JavaScript runtime pool","count":16}
+{"level":"info","ts":"2026-04-12T17:27:15.763Z","caller":"server/runtime_javascript.go:1749","msg":"Allocated minimum JavaScript runtime pool"}
+{"level":"info","ts":"2026-04-12T17:27:15.763Z","caller":"server/runtime.go:678","msg":"Found runtime modules","count":1,"modules":["index.js"]}
+{"level":"info","ts":"2026-04-12T17:27:15.763Z","caller":"server/runtime.go:695","msg":"Registered JavaScript runtime RPC function invocation","id":"get_leaderboard"}
+{"level":"info","ts":"2026-04-12T17:27:15.763Z","caller":"server/runtime.go:695","msg":"Registered JavaScript runtime RPC function invocation","id":"get_player_stats"}
+{"level":"info","ts":"2026-04-12T17:27:15.765Z","caller":"server/runtime.go:2494","msg":"Registered JavaScript runtime Matchmaker Matched function invocation"}
+{"level":"info","ts":"2026-04-12T17:27:15.766Z","caller":"server/leaderboard_scheduler.go:109","msg":"Leaderboard scheduler start"}
+{"level":"info","ts":"2026-04-12T17:27:15.766Z","caller":"server/leaderboard_scheduler.go:304","msg":"Leaderboard scheduler update","end_active":"-1ns","end_active_count":0,"expiry":"-1ns","expiry_count":0}
+{"level":"info","ts":"2026-04-12T17:27:15.767Z","caller":"server/api.go:138","msg":"Starting API server for gRPC requests","port":7349}
+{"level":"info","ts":"2026-04-12T17:27:15.773Z","caller":"server/api.go:289","msg":"Starting API server gateway for HTTP requests","port":7350}
+{"level":"info","ts":"2026-04-12T17:27:15.799Z","caller":"server/console.go:220","msg":"Starting Console server for gRPC requests","port":7348}
+{"level":"info","ts":"2026-04-12T17:27:15.801Z","caller":"server/console.go:324","msg":"Starting Console server gateway for HTTP requests","port":7351}
+{"level":"info","ts":"2026-04-12T17:27:16.121Z","caller":"main.go:229","msg":"Startup done"}
