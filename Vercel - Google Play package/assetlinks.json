@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.vercel.lila_assignment_git_main_1ds22cs099_sumabhargavreddys_projects.twa",
+        "sha256_cert_fingerprints": ["03:E4:14:20:2C:CB:E8:53:06:29:2C:AA:87:E5:09:29:75:36:D0:0C:C2:A3:17:D0:F5:4D:12:31:11:CD:65:16"]
+      }
+    }]
